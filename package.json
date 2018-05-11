@@ -1,0 +1,40 @@
+{
+  "name": "{{ name }}",
+  "description": "{{ description }}",
+  "version": "{{ version }}",
+  "author": "{{{ author }}}",
+  "license": "{{ license }}",
+  "scripts": {
+    "build:dev": "node_modules/.bin/webpack -d --watch --config config/webpack.dev.config.js",
+    "build:prod": "node_modules/.bin/webpack -p --hide-modules --config config/webpack.prod.config.js",
+    "dev": "bash config/preprocess.sh dev && npm run build:dev",
+    "prod": "bash config/preprocess.sh prod && npm run build:prod"
+  },
+  "keywords": [
+    {{#each keywords}}
+      "{{this}}"{{#if @last}}{{else}},{{/if}}
+    {{/each}}
+  ],
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "css-loader": "^0.28.11",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "html-webpack-plugin": "^3.2.0",
+    "node-sass": "^4.9.0",
+    "rc-color-picker": "^1.2.6",
+    "sass-loader": "^7.0.1",
+    "style-loader": "^0.20.3",
+    "uglifyjs-webpack-plugin": "^1.2.5",
+    "url-loader": "^1.0.1",
+    "webpack": "^3.3.0",
+    "webpack-merge": "^4.1.2"
+  },
+  "dependencies": {
+    "react": "^16.3.0",
+    "react-dom": "^16.3.0"
+  }
+}
