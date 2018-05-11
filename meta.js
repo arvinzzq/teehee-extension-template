@@ -4,13 +4,13 @@ module.exports = {
       type: 'input',
       name: "description",
       message: "项目的描述：",
-      default: "A React.js project"
+      default: "A Chrome extension project"
     },
     {
       type: 'input',
       name: "keywords",
       message: "请输入关键字：",
-      default: "react"
+      default: "chrome extension"
     },
     {
       type: 'input',
