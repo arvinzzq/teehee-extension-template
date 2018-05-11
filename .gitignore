@@ -5,3 +5,4 @@ build
 .vscode
 *.pem
 *.crx
+.DS_Store
