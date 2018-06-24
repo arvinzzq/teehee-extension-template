@@ -5,8 +5,8 @@
   "author": "{{{ author }}}",
   "license": "{{ license }}",
   "scripts": {
-    "build:dev": "node_modules/.bin/webpack -d --watch --config config/webpack.dev.config.js",
-    "build:prod": "node_modules/.bin/webpack -p --hide-modules --config config/webpack.prod.config.js",
+    "build:dev": "webpack -d --watch --config config/webpack.dev.config.js",
+    "build:prod": "webpack -p --hide-modules --config config/webpack.prod.config.js",
     "dev": "bash config/preprocess.sh dev && npm run build:dev",
     "prod": "bash config/preprocess.sh prod && npm run build:prod"
   },
